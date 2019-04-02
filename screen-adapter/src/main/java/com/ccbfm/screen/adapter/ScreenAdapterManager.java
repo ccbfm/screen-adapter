@@ -18,7 +18,7 @@ class ScreenAdapterManager {
         DisplayMetrics appDisplayMetrics = getDisplayMetrics(activity.getApplication());
         DisplayMetrics activityDisplayMetrics = getDisplayMetrics(activity);
 
-        float targetDensity = appDisplayMetrics.widthPixels / screenDpi;
+        float targetDensity = (float) appDisplayMetrics.widthPixels / screenDpi;
         int targetDensityDpi = (int) (BASIC_DPI * targetDensity);
         float targetScaledDensity = targetDensity * (appDisplayMetrics.scaledDensity / appDisplayMetrics.density);
 
